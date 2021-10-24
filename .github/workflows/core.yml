@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2021 Kaelan Thijs Fouwels <kaelan.thijs@fouwels.com>
+#
+# SPDX-License-Identifier: MIT
+
+name: Core
+on: 
+  push:
+env:
+  REPO: ${{github.repository}}
+  ARCH: linux_amd64
+jobs:
+  licencing:
+    runs-on: ubuntu-latest
+    name: Licensing (SPDX)
+    steps:
+      - uses: actions/checkout@v2
+      - name: REUSE Compliance Check
+        uses: fsfe/reuse-action@v1
