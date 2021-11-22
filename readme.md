@@ -13,7 +13,6 @@ SPDX-License-Identifier: MIT
 - Will output as `alpine-3.14.3-r0.vhd` within `./out`
 
 ## Process - Packer
-
 - Downloads and verifies the `alpine-virt` ISO
 - Boots in QEMU and uses `setup-alpine` to perform an installation
 - Serves setup-alpine `answers` file through Packer/http
@@ -26,7 +25,7 @@ SPDX-License-Identifier: MIT
 - A full build should be expected to take 1-2 minutes, excluding ISO Download.
 - You can expect to wait for "Waiting for SSH to become available..." for a number of minutes, while the system bootstraps via CLI.
 
-## Development
+## Development
 - Image can be started locally with for testing via qemu/kvm via `make local`
 
 ## Prerequisites
