@@ -12,16 +12,14 @@ endif
 
 ifeq ($(shell uname -s),Linux)
 	ACCEL=kvm
-	DISPLAY=gtk
 else ifeq ($(shell uname -s),Darwin)
 	ACCEL=hvf
-	DISPLAY=cocoa
 else
 	$(error Invalid host platform, build supports Linux, Darwin (MacOS))
 endif
 
 build:
-	PACKER_KEY_INTERVAL=$(KI) PACKER_CACHE_DIR=$(CDIR) PACKER_LOG=$(LOG) packer build -var p_root=$(ALPINE_ROOT) -var accelerator=$(ACCEL) -var display=$(DISPLAY) alpine.pkr.hcl
+	PACKER_KEY_INTERVAL=$(KI) PACKER_CACHE_DIR=$(CDIR) PACKER_LOG=$(LOG) packer build -var p_root=$(ALPINE_ROOT) -var accelerator=$(ACCEL) alpine.pkr.hcl
 
 local:
 	qemu-system-x86_64 \

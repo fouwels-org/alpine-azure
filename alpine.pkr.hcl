@@ -8,10 +8,10 @@ variables {
   display = "unset"
   p_root = "unset"
   v_alpine_major = "3.14"
-  v_alpine_minor = "2"
-  v_internal = "r3"
+  v_alpine_minor = "3"
+  v_internal = "r0"
   v_waagent = "2.4.0.2"
-  c_alpine = "fcba6ecc8419da955d326a12b2f6d9d8f885a420a1112e0cf1910914c4c814a7"
+  c_alpine = "4a62a5dabd61e7cb8f865d95781b9f070f32300ba784553b61efef2b65a8347b"
 }
 
 locals {
@@ -53,6 +53,7 @@ source "qemu" "alpine" {
     "umount /mnt<enter>", "eject -s /dev/cdrom<enter>", 
     "reboot<enter>",
     ]
+  headless = "true"
   memory = 2048
   boot_wait = "10s"
   communicator = "ssh"
