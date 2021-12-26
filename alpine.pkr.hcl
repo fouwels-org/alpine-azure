@@ -44,7 +44,7 @@ source "qemu" "alpine" {
     "root<enter>",
     "ifconfig eth0 up && udhcpc -i eth0<enter>",
     "wget -O /answers http://{{.HTTPIP}}:{{.HTTPPort}}/answers<enter>", 
-    "setup-alpine -f /answers<enter><wait5>", 
+    "USERANSERFILE=1 setup-alpine -f /answers<enter><wait5><wait5>", 
     "${var.p_root}<enter>", 
     "${var.p_root}<enter>", 
     "y<enter>",
@@ -68,4 +68,6 @@ source "qemu" "alpine" {
   skip_compaction = "true"
   ssh_password = var.p_root
   ssh_username = "root"
+  vnc_port_min = 5901
+  vnc_port_max = 5901
 }
