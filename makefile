@@ -38,3 +38,6 @@ convert:
 
 clean:
 	rm -rf output-*
+
+deps-alpine:
+	apk add make packer qemu-system-x86_64 qemu-img

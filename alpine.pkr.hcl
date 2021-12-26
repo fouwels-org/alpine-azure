@@ -7,11 +7,11 @@ variables {
   accelerator = "unset"
   display = "unset"
   p_root = "unset"
-  v_alpine_major = "3.14"
-  v_alpine_minor = "3"
+  v_alpine_major = "3.15"
+  v_alpine_minor = "0"
   v_internal = "r0"
   v_waagent = "2.4.0.2"
-  c_alpine = "4a62a5dabd61e7cb8f865d95781b9f070f32300ba784553b61efef2b65a8347b"
+  c_alpine = "e97eaedb3bff39a081d1d7e67629d5c0e8fb39677d6a9dd1eaf2752e39061e02"
 }
 
 locals {
