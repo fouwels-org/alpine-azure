@@ -33,7 +33,7 @@ SPDX-License-Identifier: MIT
 
 ## Security:
 - WAAGent is run with `OS.EnableFirewall=n`, as it's IPtables declarations do not currently function correctly under Alpine. No claim is made on the impact of this to your specific setup and configuration. Patches welcome if anyone has a solution to enable this without conflict.
-- The Root user is made available locally, including over the serial console, with the password `ALPINE_ROOT` defined when the image is created, this should be changed after deployment if local access and/or over serial consoel is a concern and/or desired feature.
+- The Root user is made available locally, including over the serial console, with the password `ALPINE_ROOT` defined when the image is created, this should be changed after deployment if local access and/or over serial console is a concern and/or desired feature.
 
 ## Development
 - Image can be auto-started locally with for testing after built via qemu/kvm via `make local`
