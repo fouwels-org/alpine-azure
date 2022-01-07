@@ -64,7 +64,8 @@ sshd() {
     echo 'HostKeyAlgorithms ssh-ed25519' >>/etc/ssh/sshd_config
     echo 'Compression no' >>/etc/ssh/sshd_config
     sed -i 's/#PermitRootLogin/PermitRootLogin/g' /etc/ssh/sshd_config
-    sed -i 's/PermitRootLogin yes/PermitRootLogin prohibit-password/g' /etc/ssh/sshd_config
+    sed -i 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+    sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin no/g' /etc/ssh/sshd_config
     sed -i 's/#PasswordAuthentication/PasswordAuthentication/g' /etc/ssh/sshd_config
     sed -i 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
     sed -i 's:#HostKey /etc/ssh/ssh_host_ed25519_key:HostKey /etc/ssh/ssh_host_ed25519_key:g' /etc/ssh/sshd_config
