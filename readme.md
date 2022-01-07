@@ -8,7 +8,7 @@ SPDX-License-Identifier: MIT
 
 ## Usage
 
-- Export `ALPINE_ROOT=<root password>`, where <root passsword> will form the password for the root user account within the image.
+- Export `ALPINE_ROOT=<root password>`, where `<root passsword>` will form the password for the root user account within the image.
 - Run `make build`
 - Pick up the `alpine-3.15.0-r0.vhd` output to within `./out`
 
